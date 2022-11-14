@@ -10,6 +10,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:text="Решатель уравнений вида"
+        android:textColor="#00BC8F"
+        android:textSize="25sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="ax^2 + bx + c"
+        android:textColor="#00BC8F"
+        android:textSize="25sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="Введите коэффициенты:"
         android:textColor="#a7c957"
         android:textSize="25sp" />
