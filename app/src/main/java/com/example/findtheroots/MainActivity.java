@@ -99,9 +99,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
-            editTextA.setText("");
-            editTextB.setText("");
-            editTextC.setText("");
         }
+        editTextA.setText("");
+        editTextB.setText("");
+        editTextC.setText("");
     }
 }
