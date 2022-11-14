@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1F9774"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Введите коэффициенты:"
+        android:textColor="#a7c957"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/edit_text_a"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Введите а"
+        android:inputType="numberDecimal|numberSigned"
+        android:textColor="#f2e8cf"
+        android:textColorHint="#a7c957"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/edit_text_b"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Введите b"
+        android:inputType="numberDecimal|numberSigned"
+        android:textColor="#f2e8cf"
+        android:textColorHint="#a7c957"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/edit_text_c"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Введите c"
+        android:inputType="numberDecimal|numberSigned"
+        android:textColor="#f2e8cf"
+        android:textColorHint="#a7c957"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ваше уравнение:"
+        android:layout_marginTop="30dp"
+        android:textColor="#a7c957"
+        android:textSize="25sp" />
+    <TextView
+        android:id="@+id/text_view_equ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="#f2e8cf"
+        android:textSize="20sp"
+        tools:text="1.55" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Корни уравнения:"
+        android:textColor="#a7c957"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/text_view_x1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="#f2e8cf"
+        android:textSize="20sp"
+        tools:text="1.55" />
+
+    <TextView
+        android:id="@+id/text_view_x2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="#f2e8cf"
+        android:textSize="20sp"
+        tools:text="1.55" />
+
+    <Button
+        android:id="@+id/button_click"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#419A1A"
+        android:text="Найти корни"
+        android:onClick="click"/>
+
+</LinearLayout>
