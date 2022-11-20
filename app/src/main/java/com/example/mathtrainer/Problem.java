@@ -5,6 +5,7 @@ import java.util.Random;
 public class Problem {
     private int lastValue = 0;
     private boolean isProblemSolved = false;
+    private int score = 0, highScore = 0;
     private int result;
     private final Random random = new Random();
 
@@ -17,7 +18,21 @@ public class Problem {
         lastValue = value;
         return value;
     }
-
+    public void upScore() {
+        score += 1;
+        if (score > highScore) {
+            highScore = score;
+        }
+    }
+    public void downScore() {
+        score = 0;
+    }
+    public String getScore() {
+        return "Ваш счёт: " + score;
+    }
+    public String getHighScore() {
+        return "Ваш рекорд: " + highScore;
+    }
     public int getResult() {
         return result;
     }

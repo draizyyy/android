@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         binding.solution2.setOnClickListener(listener);
         binding.solution3.setOnClickListener(listener);
     }
-    private void generateProblem() {
 
+    private void generateProblem() {
         binding.problem.setText(problem.getProblem());
         binding.solution1.setBackgroundColor(getColor(R.color.still));
         binding.solution2.setBackgroundColor(getColor(R.color.still));
@@ -50,20 +50,32 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void setScore() {
+        binding.score.setText(String.valueOf(problem.getScore()));
+        binding.highScore.setText(String.valueOf(problem.getHighScore()));
+    }
+
     class MyClickListener implements View.OnClickListener {
         @SuppressLint("NonConstantResourceId")
         @Override
         public void onClick(View view) {
-            switch (view.getId()) {
-                case R.id.next:
-                    if (problem.isProblemSolved()) {generateProblem();}
-                    break;
-                case R.id.solution1:
-                case R.id.solution2:
-                case R.id.solution3:
-                    String text = ((TextView)view).getText().toString();
-                    if (text.equals(String.valueOf(problem.getResult()))) {
-                        view.setBackgroundColor(getColor(R.color.correct));
+            if (!(problem.isProblemSolved())) {
+                switch (view.getId()) {
+                    case R.id.next:
+                        if (problem.isProblemSolved()) {
+                            generateProblem();
+                        }
+                        break;
+                    case R.id.solution1:
+                    case R.id.solution2:
+                    case R.id.solution3:
+                        String text = ((TextView) view).getText().toString();
+                        if (text.equals(String.valueOf(problem.getResult()))) {
+                            problem.upScore();
+                        } else {
+                            problem.downScore();
+                        }
+                        setScore();
                         problem.problemIsSolved();
                         if (!(binding.solution1.getText().equals(String.valueOf(problem.getResult())))) {
                             binding.solution1.setBackgroundColor(getColor(R.color.incorrect));
@@ -74,10 +86,22 @@ public class MainActivity extends AppCompatActivity {
                         if (!(binding.solution3.getText().equals(String.valueOf(problem.getResult())))) {
                             binding.solution3.setBackgroundColor(getColor(R.color.incorrect));
                         }
+                        if (binding.solution1.getText().equals(String.valueOf(problem.getResult()))) {
+                            binding.solution1.setBackgroundColor(getColor(R.color.correct));
+                        }
+                        if (binding.solution2.getText().equals(String.valueOf(problem.getResult()))) {
+                            binding.solution2.setBackgroundColor(getColor(R.color.correct));
+                        }
+                        if (binding.solution3.getText().equals(String.valueOf(problem.getResult()))) {
+                            binding.solution3.setBackgroundColor(getColor(R.color.correct));
+                        }
+                }
+            } else {
+                if (view.getId() == R.id.next) {
+                    if (problem.isProblemSolved()) {
+                        generateProblem();
                     }
-                    else {
-                        view.setBackgroundColor(getColor(R.color.incorrect));
-                    }
+                }
             }
         }
     }
