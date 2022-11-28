@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Введите данные для входа:"
+        android:textColor="@color/white"
+        android:layout_marginTop="70dp"
+        android:textSize="25sp"
+        />
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="140dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Введите почту"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+        android:textColorHint="@color/hint"
+        android:textSize="25sp" />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="210dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Введите пароль"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/hint"
+        android:textSize="25sp" />
+    <TextView
+        android:id="@+id/error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="290dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/red"
+        android:textColorHint="@color/hint"
+        android:textSize="20sp"
+        tools:text="Пароль должен быть больше"/>
+
+    <TextView
+        android:id="@+id/error_extended"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/red"
+        android:textColorHint="@color/hint"
+        android:textSize="20sp"
+        tools:text="восьми символов"/>
+
+    <Button
+        android:id="@+id/button"
+        android:backgroundTint="@color/hint"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="250dp"
+        android:text="Вход"
+        android:textSize="20sp"
+        android:visibility="visible" />
+
+
+
+</RelativeLayout>
